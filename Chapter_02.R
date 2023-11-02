@@ -159,3 +159,6 @@ num1 <- rnorm(1000, mean=19, sd=1.29)
 plot(num1)
 sd(num1)
 mean(num1)
+
+quantile(num1)
+quantile(num1, probs=0.5)
