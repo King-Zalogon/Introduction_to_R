@@ -11,6 +11,7 @@ hist(rnorm(10000))
 10 %/% 3
 
 # Functions
+exp(1) # Euler's number "e"
 exp(3)
 sqrt(3)
 log(3)
@@ -123,3 +124,38 @@ print(x)
 return(x)
 cut(1:20, breaks = 3)
 cut(1:20, breaks = 3) |> factor(labels = c('A', 'B', 'C'))
+
+# Unit 2.8 Practice
+
+((24 + 12)/(2*3)^2)
+sqrt((24 + 12)/(2*3)^3)
+
+log10(abs((exp(10)^2)/(-10*(9^6))))
+
+z <- -1.69 + 1 * 0.56
+sigmoidal_of_z = 1/(1+(exp(1)^(-z)))
+sigmoidal_of_z = 1/(1 + exp(-z))
+sigmoidal_of_z*100
+
+eMat1 <- expression((-2*x)+2)
+eMat2 <- expression((-2*(x^2))-5)
+eMat3 <- expression(((x^3)+2)/3)
+
+D(eMat1, "x")
+D(eMat2, "x")
+D(eMat3, "x")
+
+eMat4 <- expression(x^2 + y^2 + 2*x*y - 3 * x + 4 * y + 4)
+D(eMat4, "x")
+D(eMat4, "y")
+
+eMat5 <- expression(x^2 + 3*x)
+D(eMat5, "x")
+D(D(eMat5, "x"), "x")
+
+
+set.seed(123)
+num1 <- rnorm(1000, mean=19, sd=1.29)
+plot(num1)
+sd(num1)
+mean(num1)
