@@ -162,3 +162,7 @@ mean(num1)
 
 quantile(num1)
 quantile(num1, probs=0.5)
+1 %in% c(4,3,2)
+
+sample(0:100, 10, replace = FALSE)
+
